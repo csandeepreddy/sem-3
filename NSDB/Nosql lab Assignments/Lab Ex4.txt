@@ -1,0 +1,258 @@
+> db.adminCommand( { listDatabases: 1 } )
+{
+        "databases" : [
+                {
+                        "name" : "Labdb",
+                        "sizeOnDisk" : 16384,
+                        "empty" : false
+                },
+                {
+                        "name" : "admin",
+                        "sizeOnDisk" : 184320,
+                        "empty" : false
+                },
+                {
+                        "name" : "config",
+                        "sizeOnDisk" : 36864,
+                        "empty" : false
+                },
+                {
+                        "name" : "local",
+                        "sizeOnDisk" : 73728,
+                        "empty" : false
+                },
+                {
+                        "name" : "mylab1",
+                        "sizeOnDisk" : 81920,
+                        "empty" : false
+                }
+        ],
+        "totalSize" : 393216,
+        "ok" : 1
+}
+
+}
+
+> db.createCollection("LabTemp");
+{ "ok" : 1 }
+> db.adminCommand({ listCollections: 1, nameOnly:true })
+{
+        "cursor" : {
+                "id" : NumberLong(0),
+                "ns" : "admin.$cmd.listCollections",
+                "firstBatch" : [
+                        {
+                                "name" : "system.users",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "system.version",
+                                "type" : "collection"
+                        }
+                ]
+        },
+        "ok" : 1
+}
+
+
+> db.adminCommand( { renameCollection: "Labdb.LabTemp", to: "Labdb.TempLab" } );
+{ "ok" : 1 }
+
+> show collections
+MarkList
+SubjectList
+TempLab
+
+> db.getCollectionNames()
+[ "MarkList", "SubjectList", "TempLab" ]
+> db.getCollectionInfos();
+[
+        {
+                "name" : "MarkList",
+                "type" : "collection",
+                "options" : {
+
+                },
+                "info" : {
+                        "readOnly" : false,
+                        "uuid" : UUID("47fbf4ff-2ba7-4bce-8be1-46636d73839d")
+                },
+                "idIndex" : {
+                        "v" : 2,
+                        "key" : {
+                                "_id" : 1
+                        },
+                        "name" : "_id_"
+                }
+        },
+        {
+                "name" : "SubjectList",
+                "type" : "collection",
+                "options" : {
+
+                },
+                "info" : {
+                        "readOnly" : false,
+                        "uuid" : UUID("f3aa34e7-22a5-499a-bb36-116f8079a061")
+                },
+                "idIndex" : {
+                        "v" : 2,
+                        "key" : {
+                                "_id" : 1
+                        },
+                        "name" : "_id_"
+                }
+        },
+        {
+                "name" : "TempLab",
+                "type" : "collection",
+                "options" : {
+
+                },
+                "info" : {
+                        "readOnly" : false,
+                        "uuid" : UUID("e87f4ff8-9f5a-4a27-880b-61887888ea86")
+                },
+                "idIndex" : {
+                        "v" : 2,
+                        "key" : {
+                                "_id" : 1
+                        },
+                        "name" : "_id_"
+                }
+        }
+]
+> db.runCommand( { listCollections: 1.0, nameOnly: true } )
+{
+        "cursor" : {
+                "id" : NumberLong(0),
+                "ns" : "Labdb.$cmd.listCollections",
+                "firstBatch" : [
+                        {
+                                "name" : "MarkList",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "TempLab",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "SubjectList",
+                                "type" : "collection"
+                        }
+                ]
+        },
+        "ok" : 1
+}
+> db.runCommand( { listCollections: 1.0, nameOnly: true } );
+{
+        "cursor" : {
+                "id" : NumberLong(0),
+                "ns" : "Labdb.$cmd.listCollections",
+                "firstBatch" : [
+                        {
+                                "name" : "MarkList",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "TempLab",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "SubjectList",
+                                "type" : "collection"
+                        }
+                ]
+        },
+        "ok" : 1
+}
+> db.adminCommand( { listCollections: 1.0, nameOnly: true } );
+{
+        "cursor" : {
+                "id" : NumberLong(0),
+                "ns" : "admin.$cmd.listCollections",
+                "firstBatch" : [
+                        {
+                                "name" : "system.users",
+                                "type" : "collection"
+                        },
+                        {
+                                "name" : "system.version",
+                                "type" : "collection"
+                        }
+                ]
+        },
+        "ok" : 1
+}
+> db.TempLab.drop( );
+true
+> db.getCollectionNames()
+[ "MarkList", "SubjectList" ]
+> use tempDB
+switched to db tempDB
+> db.createCollection("LabTemp");
+{ "ok" : 1 }
+> db.dropDatabase( );
+{ "dropped" : "tempDB", "ok" : 1 }
+> db.getCollectionNames()
+[ ]
+> use Labdb;
+switched to db Labdb
+> db.Labdb.find( );
+> db.getCollectionNames()
+[ "MarkList", "SubjectList" ]
+> use mylab1
+switched to db mylab1
+> db.getCollectionNames()
+[ "LabMod", "mylab1" ]
+> db.Labdb.find( );
+> db.mylab1.find();
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+> db.mylab1.find().count();
+2
+> db.mylab1.find( { }, { Expno: 1 } );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02" }
+> db.mylab1.find( { }, { Expno: "01" } );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "01" }
+> db.mylab1.find( { }, { "Expno": "01" } );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "01" }
+
+> db.mylab1.countDocuments({})
+2
+> db.mylab1.insert({Expno:"03",Status:"Completed"});
+WriteResult({ "nInserted" : 1 })
+> db.mylab1.find( ).limit( 2 );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+> db.mylab1.insert({Expno:"04",Status:"Completed"});
+WriteResult({ "nInserted" : 1 })
+> db.mylab1.find( ).limit( 3 );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+{ "_id" : ObjectId("5f5c4d08e666714d18605b3f"), "Expno" : "03", "Status" : "Completed" }
+> db.mylab1.find( ).skip( 2 );
+{ "_id" : ObjectId("5f5c4d08e666714d18605b3f"), "Expno" : "03", "Status" : "Completed" }
+{ "_id" : ObjectId("5f5c4d36e666714d18605b40"), "Expno" : "04", "Status" : "Completed" }
+> db.mylab1.find( ).sort( { Expno: 1 } );
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+{ "_id" : ObjectId("5f5c4d08e666714d18605b3f"), "Expno" : "03", "Status" : "Completed" }
+{ "_id" : ObjectId("5f5c4d36e666714d18605b40"), "Expno" : "04", "Status" : "Completed" }
+> db.mylab1.find( ).sort( { Expno: -1 } );
+{ "_id" : ObjectId("5f5c4d36e666714d18605b40"), "Expno" : "04", "Status" : "Completed" }
+{ "_id" : ObjectId("5f5c4d08e666714d18605b3f"), "Expno" : "03", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+
+> db.mylab1.createIndex({Expno: 1});
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+>

@@ -1,0 +1,319 @@
+> use labwork
+switched to db labwork
+> db.labwork.insertMany([ {Stud_id: "101",Expno:"01",Status:"Completed",Ass_mark: 9,Test_mark: 9}, {Stud_id: "101",Expno:"02",Status:"Completed",Ass_mark:8,Test_mark:10}, {Stud_id: "101",Expno:"03",Status:"Completed",Ass_mark:10,Test_mark:10}, {Stud_id: "101",Expno:"04",Status:"Completed",Ass_mark:10,Test_mark:9}, {Stud_id: "101",Expno:"05",Status:"Completed",Ass_mark:10,Test_mark:10} ]);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f657875a00bb59cacb530a0"),
+                ObjectId("5f657875a00bb59cacb530a1"),
+                ObjectId("5f657875a00bb59cacb530a2"),
+                ObjectId("5f657875a00bb59cacb530a3"),
+                ObjectId("5f657875a00bb59cacb530a4")
+        ]
+}
+> db.labwork.insertMany([ {Stud_id: "102",Expno:"01",Status:"Completed",Ass_mark: 3,Test_mark: 9}, {Stud_id: "102",Expno:"02",Status:"Completed",Ass_mark:7,Test_mark:9}, {Stud_id: "102",Expno:"03",Status:"Completed",Ass_mark:7,Test_mark:10}, {Stud_id: "102",Expno:"04",Status:"Completed",Ass_mark:10,Test_mark:10}, {Stud_id: "102",Expno:"05",Status:"On-going",Ass_mark:0,Test_mark:1} ]);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f657898a00bb59cacb530a5"),
+                ObjectId("5f657898a00bb59cacb530a6"),
+                ObjectId("5f657898a00bb59cacb530a7"),
+                ObjectId("5f657898a00bb59cacb530a8"),
+                ObjectId("5f657898a00bb59cacb530a9")
+        ]
+}
+> db.labwork.insertMany([ {Stud_id: "103",Expno:"01",Status:"Completed",Ass_mark: 10,Test_mark: 8}, {Stud_id: "103",Expno:"02",Status:"Completed",Ass_mark:5,Test_mark:9}, {Stud_id: "103",Expno:"03",Status:"Completed",Ass_mark:9,Test_mark:10}, {Stud_id: "103",Expno:"04",Status:"On-going",Ass_mark:0,Test_mark:3}, {Stud_id: "103",Expno:"05",Status:"On-going",Ass_mark:0,Test_mark:2} ]);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f6578b8a00bb59cacb530aa"),
+                ObjectId("5f6578b8a00bb59cacb530ab"),
+                ObjectId("5f6578b8a00bb59cacb530ac"),
+                ObjectId("5f6578b8a00bb59cacb530ad"),
+                ObjectId("5f6578b8a00bb59cacb530ae")
+        ]
+}
+> db.labwork.find();
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+
+AGGREGATE FUNCTIONS:
+
+> db.labwork.aggregate([ {$match: {Stud_id: "101"} }, {$group: {_id:"$Status",totalAssMark: {$sum: "$Ass_mark"},totalTestMark:{$sum:"$Test_mark"}}} ])
+
+{ "_id" : "Completed", "totalAssMark" : 47, "totalTestMark" : 48 }
+
+> db.labwork.aggregate([ {$match: {Status: "Completed"} }, {$group: {_id:"$Stud_id",totalAssMark: {$sum: "$Ass_mark"},totalTestMark:{$sum:"$Test_mark"}}} ])
+
+{ "_id" : "101", "totalAssMark" : 47, "totalTestMark" : 48 }
+{ "_id" : "102", "totalAssMark" : 27, "totalTestMark" : 38 }
+{ "_id" : "103", "totalAssMark" : 24, "totalTestMark" : 27 }
+
+> db.labwork.aggregate([{ $project: { Stud_id: 1, totalmarks: { $add: [ "$Ass_mark", "$Test_mark" ] } } }])
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "totalmarks" : 18 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "totalmarks" : 18 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "totalmarks" : 20 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "totalmarks" : 19 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "totalmarks" : 20 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "totalmarks" : 12 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "totalmarks" : 16 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "totalmarks" : 17 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "totalmarks" : 20 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "totalmarks" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "totalmarks" : 18 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "totalmarks" : 14 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "totalmarks" : 19 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "totalmarks" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "totalmarks" : 2 }
+
+> db.labwork.find().limit(3);
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+
+> db.labwork.find().skip(7);
+
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+
+> db.labwork.find().sort({Expno: 1});
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+
+> db.labwork.find().sort({Expno: -1});
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+
+> db.labwork.find().sort({Ass_mark: -1});
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+
+> db.labwork.find().sort({Test_mark: -1});
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+
+> db.labwork.find().sort({Ass_mark: -1,Test_mark: -1});
+
+{ "_id" : ObjectId("5f657875a00bb59cacb530a2"), "Stud_id" : "101", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a4"), "Stud_id" : "101", "Expno" : "05", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a8"), "Stud_id" : "102", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a3"), "Stud_id" : "101", "Expno" : "04", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530aa"), "Stud_id" : "103", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 10, "Test_mark" : 8 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ac"), "Stud_id" : "103", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a0"), "Stud_id" : "101", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 9, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657875a00bb59cacb530a1"), "Stud_id" : "101", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 8, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a7"), "Stud_id" : "102", "Expno" : "03", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 10 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a6"), "Stud_id" : "102", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 7, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ab"), "Stud_id" : "103", "Expno" : "02", "Status" : "Completed", "Ass_mark" : 5, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a5"), "Stud_id" : "102", "Expno" : "01", "Status" : "Completed", "Ass_mark" : 3, "Test_mark" : 9 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ad"), "Stud_id" : "103", "Expno" : "04", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 3 }
+{ "_id" : ObjectId("5f6578b8a00bb59cacb530ae"), "Stud_id" : "103", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 2 }
+{ "_id" : ObjectId("5f657898a00bb59cacb530a9"), "Stud_id" : "102", "Expno" : "05", "Status" : "On-going", "Ass_mark" : 0, "Test_mark" : 1 }
+
+>db.labwork.find().count();
+15
+
+> db.labwork.find().pretty();
+
+{
+        "_id" : ObjectId("5f657875a00bb59cacb530a0"),
+        "Stud_id" : "101",
+        "Expno" : "01",
+        "Status" : "Completed",
+        "Ass_mark" : 9,
+        "Test_mark" : 9
+}
+{
+        "_id" : ObjectId("5f657875a00bb59cacb530a1"),
+        "Stud_id" : "101",
+        "Expno" : "02",
+        "Status" : "Completed",
+        "Ass_mark" : 8,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f657875a00bb59cacb530a2"),
+        "Stud_id" : "101",
+        "Expno" : "03",
+        "Status" : "Completed",
+        "Ass_mark" : 10,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f657875a00bb59cacb530a3"),
+        "Stud_id" : "101",
+        "Expno" : "04",
+        "Status" : "Completed",
+        "Ass_mark" : 10,
+        "Test_mark" : 9
+}
+{
+        "_id" : ObjectId("5f657875a00bb59cacb530a4"),
+        "Stud_id" : "101",
+        "Expno" : "05",
+        "Status" : "Completed",
+        "Ass_mark" : 10,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f657898a00bb59cacb530a5"),
+        "Stud_id" : "102",
+        "Expno" : "01",
+        "Status" : "Completed",
+        "Ass_mark" : 3,
+        "Test_mark" : 9
+}
+{
+        "_id" : ObjectId("5f657898a00bb59cacb530a6"),
+        "Stud_id" : "102",
+        "Expno" : "02",
+        "Status" : "Completed",
+        "Ass_mark" : 7,
+        "Test_mark" : 9
+}
+{
+        "_id" : ObjectId("5f657898a00bb59cacb530a7"),
+        "Stud_id" : "102",
+        "Expno" : "03",
+        "Status" : "Completed",
+        "Ass_mark" : 7,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f657898a00bb59cacb530a8"),
+        "Stud_id" : "102",
+        "Expno" : "04",
+        "Status" : "Completed",
+        "Ass_mark" : 10,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f657898a00bb59cacb530a9"),
+        "Stud_id" : "102",
+        "Expno" : "05",
+        "Status" : "On-going",
+        "Ass_mark" : 0,
+        "Test_mark" : 1
+}
+{
+        "_id" : ObjectId("5f6578b8a00bb59cacb530aa"),
+        "Stud_id" : "103",
+        "Expno" : "01",
+        "Status" : "Completed",
+        "Ass_mark" : 10,
+        "Test_mark" : 8
+}
+{
+        "_id" : ObjectId("5f6578b8a00bb59cacb530ab"),
+        "Stud_id" : "103",
+        "Expno" : "02",
+        "Status" : "Completed",
+        "Ass_mark" : 5,
+        "Test_mark" : 9
+}
+{
+        "_id" : ObjectId("5f6578b8a00bb59cacb530ac"),
+        "Stud_id" : "103",
+        "Expno" : "03",
+        "Status" : "Completed",
+        "Ass_mark" : 9,
+        "Test_mark" : 10
+}
+{
+        "_id" : ObjectId("5f6578b8a00bb59cacb530ad"),
+        "Stud_id" : "103",
+        "Expno" : "04",
+        "Status" : "On-going",
+        "Ass_mark" : 0,
+        "Test_mark" : 3
+}
+{
+        "_id" : ObjectId("5f6578b8a00bb59cacb530ae"),
+        "Stud_id" : "103",
+        "Expno" : "05",
+        "Status" : "On-going",
+        "Ass_mark" : 0,
+        "Test_mark" : 2
+}
+
+>db.labwork.countDocuments({})
+15
+

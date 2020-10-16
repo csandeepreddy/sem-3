@@ -1,0 +1,46 @@
+
+> use mylab1;
+switched to db mylab1
+> show collections;
+LabMod
+> db.getUsers();
+[
+        {
+                "_id" : "mylab1.user1",
+                "userId" : UUID("604e8d24-127a-4f7a-b6ec-f8a22a23e8df"),
+                "user" : "user1",
+                "db" : "mylab1",
+                "roles" : [
+                        {
+                                "role" : "readWrite",
+                                "db" : "mylab1"
+                        },
+                        {
+                                "role" : "dbAdmin",
+                                "db" : "mylab1"
+                        }
+                ],
+                "mechanisms" : [
+                        "SCRAM-SHA-1",
+                        "SCRAM-SHA-256"
+                ]
+        }
+]
+> db.mylab1.insert({Expno:"01",Status:"Completed"});
+WriteResult({ "nInserted" : 1 })
+> db.mylab1.save({Expno:"02",Status:"Ongoing"});
+WriteResult({ "nInserted" : 1 })
+> db.mylab1.update({Expno:"02"},{Expno:"02",Status:"Ongoing",Deadline:"10-09-2020"});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.mylab1.find()
+{ "_id" : ObjectId("5f530532979e59a0592c1074"), "Expno" : "01", "Status" : "Completed" }
+{ "_id" : ObjectId("5f530568979e59a0592c1075"), "Expno" : "02", "Status" : "Ongoing", "Deadline" : "10-09-2020" }
+> db.createCollection("LabRecord");
+{ "ok" : 1 }
+> db.LabRecord.drop();
+true
+>db.Labdb.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+   { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+])

@@ -1,0 +1,71 @@
+> use Labdb
+switched to db Labdb
+> db.auth("Student1","1234");
+1
+> db.logout();
+{ "ok" : 1 }
+> db.auth("Student1");
+Enter password:
+1
+> db.auth("Student2",passwordPrompt());
+Enter password:
+1
+> show dbs;
+Labdb   0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+mylab1  0.000GB
+> show collections;
+MarkList
+SubjectList
+> db.getCollectionNames();
+[ "MarkList", "SubjectList" ]
+> db.getUsers();
+[
+        {
+                "_id" : "Labdb.Student1",
+                "userId" : UUID("9f9855c3-b60c-4632-b44c-8f3eb50716f8"),
+                "user" : "Student1",
+                "db" : "Labdb",
+                "roles" : [
+                        {
+                                "role" : "readWrite",
+                                "db" : "Labdb"
+                        },
+                        {
+                                "role" : "dbAdmin",
+                                "db" : "Labdb"
+                        }
+                ],
+                "mechanisms" : [
+                        "SCRAM-SHA-1",
+                        "SCRAM-SHA-256"
+                ]
+        },
+        {
+                "_id" : "Labdb.Student2",
+                "userId" : UUID("ccda57d8-8a11-4423-b4ab-38f88ab3aa5e"),
+                "user" : "Student2",
+                "db" : "Labdb",
+                "roles" : [
+                        {
+                                "role" : "readAnyDatabase",
+                                "db" : "admin"
+                        }
+                ],
+                "mechanisms" : [
+                        "SCRAM-SHA-1",
+                        "SCRAM-SHA-256"
+                ]
+        }
+]
+> db.getRoles();
+[ ]
+> db.getRoles(
+...     {
+...       rolesInfo: 1,
+...       showPrivileges:true,
+...       showBuiltinRoles: true
+...     }
+... );
