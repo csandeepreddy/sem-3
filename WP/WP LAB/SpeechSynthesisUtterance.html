@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>speechsynthesisutterance</title>
+
+
+
+</head>
+<body>
+<form>
+<div>Your name:</div>
+<input name="enterName" id="enterName" type="text">
+<div style="margin-top:10px;" class="submit">
+<input value="Greet Me!" id="submit_this" type="button">
+</div>
+</form>
+<br>
+<div id="result"></div>
+<script>
+$(document).ready(function() {
+    var greeting = function(name) {
+            var name = $('#enterName').val();
+            name = 'Hello,' + ' ' + name;
+console.log('Hello,' + '' + name);
+            $('#result').text(name);
+        };
+
+    $('#submit_this').click(function() {
+greeting();
+        //prompt('Great to see you,' + '' + name);
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<img src="http://hackasaurus.toolness.org/images/goggles/supergirl.png">
+<p>
+<button id="clicker">Click me to change the picture</button>
+</p>
+Instructions:
+Change the page with jQuery so that when the button is clicked, the image changes to this:
+Source Code:-
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#Clicker").click(function(){
+   $("img").before("Rose");
+  });
+});
+</script>
+</head>
+<body>
+<imgsrc="rose.jpg" alt="jQuery"width="50" height="50"><br><br>
+<button id="Clicker">Click me to show a hidden secret</button>
+</body>
+</html>
