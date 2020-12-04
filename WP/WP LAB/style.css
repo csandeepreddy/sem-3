@@ -1,0 +1,48 @@
+
+  * {
+  text-align: center;
+  color: blue;
+}
+#para1 {
+  border-style: dotted;
+  border-width: 5x;
+  border-color: red;
+  border-left-style: solid;
+}
+div {
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+  p.large {
+    text-align :center;
+    color: DodgerBlue
+  }
+  .center {
+  text-align: center;
+  color: yellow;
+}
+  #para1 {
+  text-align: center;
+  color: red;
+  }
+  #para2 {
+  text-align: center;
+  color: red;
+          }
+  h1 {
+      color: red;
+      text-align: center;
+      font-family: verdana;
+  }
+  p {
+      color: green;
+      text-align: center;
+      font-size: 30px;
+  }
+  h4, h5, h6 ,p {
+  text-align: center;
+  color: purple;
