@@ -1,5 +1,15 @@
 
-
+div {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: DodgerBlue;
+  box-shadow: 10px 10px;
+  position: relative;
+}
+h1 {
+  text-shadow: 3px 3px 5px green;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -119,3 +129,28 @@ a:active {
   h4, h5, h6 ,p {
   text-align: center;
   color: purple;
+}
+#rcorners3 {
+  border-radius: 25px;
+  background: url(https://www.bing.com/images/search?view=detailV2&ccid=oHuLcB0a&id=BFD59CEF41288F50F81DCBE8118344062E0B463E&thid=OIP.oHuLcB0aTh7GI7ZqMyxE8AHaLG&mediaurl=https%3a%2f%2f2.bp.blogspot.com%2f-UpTLoNXVBOA%2fUhBNW4oJsoI%2fAAAAAAAAoyg%2f0itL3CCtGJY%2fs1600%2fPrabhas%2bHD%2bWallpapers%2b3.jpg&exph=1600&expw=1067&q=prabhas&simid=608031687241041281&ck=9F99DE9840CC2FB3CD560F1A004AA17C&selectedIndex=1&FORM=IRPRST&ajaxhist=0);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+#example1 {
+  background-image: url(oip.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding:20px;
+  width: 800px;
+  position: relative;
+}
+#grad1 {
+  height: 55px;
+  width: 500px;
+  position: center;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, blue, white, green);
+}
