@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+</head>
 <body>
 <h2> This is my first JavaScript program.</h2>
 
-<p id="demo">this is element.getById</p>
-<button type="button" onclick="document.getElementById('demo').inner.html="hello JavaScript"</button>
+<p id="demo">this is element getById</p>
+<button type="button" onclick="document.getElementById('demo').inner.html='hello JavaScript!'"</button>
 </body>
 </html>

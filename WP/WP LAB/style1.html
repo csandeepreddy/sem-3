@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="myscript.js"></script>
+</head>
+<body>
+<h1> who r man</h1>
+<p id="showroom"></p>
+<p id="about">your Name</p>
+<button type="button" onclick="myfunction()">show</button>
+<p id="Result">accurate=</p>
+<p id="statements"></p>
+<p id="sam jam"></p>
+<p id="variables"></p>
+<p id="function"></p>
+<p id="biodata"></p>
+<p id="timetaken"></p>
+<script>
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+document.getElementById("biodata").innerHTML="my age is  " + person.age;
+var car={type:"volvo", model:"2020", color:"grey", weight:"500kg"};
+document.getElementById("showroom").innerHTML="this is car type is " + car.color;
+var pi = 3.14;
+var person = "John Doe";
+var answer = 'Yes I am!';
+var person ="sandeep", carName ="valvo", price="200000";
+
+var x, y, z;
+x = 5;
+y = 7;
+z =x + y;
+var person= "hello sam";
+document.getElementById("variables").innerHTML =
+pi + "<br>" + person + "<br>" + answer;
+document.getElementById("sam jam").innerHTML ="sam jam";
+document.getElementById("statements").innerHTML ="The value of z is " + z + ".";
+document.getElementById("Result").innerHTML = 5 + 67;
+document.write(5+67);
+window.alert(5 + 6);
+document.getElementById("function").innerHTML = myFunction(4, 3);
+</script>
+  <p id="codeblocks"></p>
+<button type="button" onclick="myfunction()">press here</button>
+<h2> This is my first JavaScript program.</h2>
+
+<p id="demo">this is element getById</p>
+<p id="brenden"></p>
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+<br><br><button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:105px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button> */
+<button onclick="window.print()">Print this page</button>
+<br><br><button onclick="document.getElementById('timetaken').innerHTML=Date()">The time is?
+</button>
+</body>
+</html>
