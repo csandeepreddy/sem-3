@@ -15,6 +15,8 @@
 <p id="function"></p>
 <p id="biodata"></p>
 <p id="timetaken"></p>
+<p id="numbermethod"></p>
+<p>Please input a number between 5 and 10:</p>
 <script>
 var person = {
   firstName: "John",
@@ -29,6 +31,12 @@ var pi = 3.14;
 var person = "John Doe";
 var answer = 'Yes I am!';
 var person ="sandeep", carName ="valvo", price="200000";
+
+var x = 123;
+document.getElementById("numbermethod").innerHTML=
+ x.toString() + "<br>" +
+ (123).toString() + "<br>" +
+  (100 + 23).toString();
 
 var x, y, z;
 x = 5;
@@ -60,5 +68,11 @@ document.getElementById("function").innerHTML = myFunction(4, 3);
 <button onclick="window.print()">Print this page</button>
 <br><br><button onclick="document.getElementById('timetaken').innerHTML=Date()">The time is?
 </button>
+<strong><p>Please input a number between 5 and 10:</p></strong>
+<input id="errors" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+
+<p id="p01"></p>
+
 </body>
 </html>
