@@ -26,6 +26,13 @@
 <p id="numbermethod"></p>
 <p>Please input a number between 5 and 10:</p>
 <script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+  document.getElementById("time").innerHTML = d.toLocaleTimeString();
+}
+
+
 document.write(Date());
 var x = 0;
 document.getElementById("mistake").innerHTML = Boolean(x == 10);
@@ -85,6 +92,10 @@ document.getElementById("function").innerHTML = myFunction(4, 3);
 
 <p id="p01"></p>
 <p id="mistake"></p>
+
+<p id="time"></p>
+<button onclick="clearInterval(myVar)">Stop time</button>
+
 
 </body>
 </html>
